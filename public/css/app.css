@@ -1,0 +1,368 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Для более предсказуемого управления размерами */
+}
+
+/* Основные стили для body */
+body {
+    background: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #333; /* Добавляем базовый цвет текста */
+    line-height: 1.6; /* Лучшая читаемость текста */
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    color: #6f6f6f;
+    transition: color 0.3s ease; /* Укорочен переход для более естественного эффекта */
+}
+
+a:hover {
+    color: #1f1f1f;
+}
+
+/* Контейнер */
+.container {
+    width: 90%; /* Адаптивность */
+    max-width: 1258px;
+    margin: 0 auto;
+    padding: 0 15px; /* Для отступов по бокам */
+}
+
+/* Хедер */
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+header form {
+    display: inline-block;
+}
+
+header form button {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+
+header .logo {
+    color: #222;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Навигация */
+header nav {
+    display: flex; /* Для горизонтального расположения */
+    gap: 20px; /* Расстояние между ссылками */
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #6f6f6f;
+    font-size: 16px; /* Размер шрифта для ссылок */
+    font-weight: 500; /* Полужирный текст */
+    padding: 20px 15px; /* Отступы внутри ссылок */
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #fff;
+    background-color: #1f1f1f; /* Задний фон при наведении */
+}
+
+header nav a.login-button {
+    color: #007bff; /* Синий цвет текста */
+    font-weight: 500; /* Полужирный текст */
+    font-size: 16px; /* Размер шрифта */
+    padding: 8px 20px; /* Отступы внутри кнопки */
+    border: 1px solid #007bff; /* Синяя рамка */
+    border-radius: 5px; /* Скругленные углы */
+    background-color: transparent; /* Прозрачный фон */
+    transition: all 0.3s ease; /* Эффект перехода */
+}
+
+header nav a.login-button:hover {
+    background-color: #007bff; /* Синий фон при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+
+/* Презентационный блок */
+.presentation {
+    background: url('/img/money.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #727272;
+    position: relative;
+}
+
+/* Текст в презентационном блоке */
+.presentation::after {
+    content: 'Лучшие новости со всего мира';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    max-width: 300px;
+}
+
+.presentation::before {
+    content: 'Только самое интересное';
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    color: #d7d7d7;
+    font-size: 15px;
+}
+
+/* Блоки контента */
+div.block {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc; /* Цвет границы немного светлее */
+    border-bottom-width: 2px;
+    background: #ebebeb;
+    line-height: 1.7; /* Улучшена читаемость */
+    margin-bottom: 20px; /* Добавлен отступ между блоками */
+}
+
+div.block h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+div.block ul, 
+div.block ol {
+    margin-top: 10px;
+    padding-left: 20px; /* Сдвиг для маркированных списков */
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.articles .post {
+    width: 27%;
+    padding: 20px;
+    background: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.articles .post img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.articles .post a,
+.back-button,
+.delete-button,
+header form button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    background: #bebebe;
+    border-radius: 5px;
+    padding: 10px 12px;
+    color: #fff;
+    transition: transform 500ms ease;
+}
+
+.articles .post a:hover,
+.back-button:hover,
+.delete-button:hover,
+header form button:hover {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.delete-button {
+    background: #d45858;
+    border: 0;
+    cursor: pointer;
+}
+
+.articles.one .post {
+    width: 100%;
+    border: 1px solid silver;
+    border-bottom-width: 2px;
+}
+
+.article-form {
+    margin-top: 20px;
+}
+
+form.article-form input[type='checkbox'] {
+    width: initial;
+}
+
+form.article-form .login-btn {
+    display: block;
+}
+
+form.article-form label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+form.article-form input,
+form.article-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+form.article-form input[type='submit'] {
+    margin-top: 20px;
+    cursor: pointer;
+    background: #d45858;
+    width: 100px;
+    color: #fff;
+    border: 0;
+    transition: all 500ms ease;
+}
+
+form.article-form input[type='submit']:hover {
+    background: #a63f3f;
+}
+
+.error-mess, .success-mess {
+    padding: 15px 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.error-mess {
+    background: #d45858;
+}
+
+.success-mess {
+    background: #6ab05a;
+}
+
+/* Карточка товара */
+.card {
+    border: 1px solid #dee2e6; /* Лёгкая граница */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Поднимаем карточку */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Усиленная тень */
+}
+
+/* Кнопка "Подробнее" */
+.btn-primary {
+    background-color: #007bff; /* Синий цвет */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Тёмно-синий */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для карточек */
+    border: none;
+    border-radius: 10px; /* Скругление углов */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-footer {
+    background-color: #f8f9fa; /* Светло-серый фон */
+    border-top: 1px solid #e9ecef;
+}
+
+textarea.form-control {
+    resize: none; /* Отключение изменения размеров */
+}
+
+.alert-success {
+    border: 1px solid #28a745; /* Обводка для успешного сообщения */
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+
+/* Футер */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 0;
+    background: #f1f1f1;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header.container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .presentation {
+        height: 300px; /* Уменьшаем высоту на мобильных устройствах */
+    }
+
+    .presentation::after {
+        font-size: 30px;
+        top: 50px;
+        left: 20px;
+    }
+
+    .presentation::before {
+        font-size: 12px;
+        top: 200px;
+        left: 20px;
+    }
+}
+
